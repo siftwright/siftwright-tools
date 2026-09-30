@@ -6,7 +6,7 @@
         "-y",
         "@apify/actors-mcp-server",
         "--actors",
-        "siftwright/youtube-transcript-extractor,siftwright/pageframe-screenshots,siftwright/google-news-scraper,siftwright/contact-details-extractor,siftwright/app-store-reviews-scraper"
+        "siftwright/youtube-transcript-extractor,siftwright/pageframe-screenshots,siftwright/google-news-scraper,siftwright/contact-details-extractor,siftwright/app-store-reviews-scraper,siftwright/tech-stack-detector"
       ],
       "env": { "APIFY_TOKEN": "YOUR_APIFY_TOKEN" }
     }

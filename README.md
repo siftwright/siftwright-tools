@@ -20,6 +20,7 @@
 | 📰 | **[Google News Scraper](https://apify.com/siftwright/google-news-scraper)** | Google News results for any keyword, brand or topic as JSON: title, link, source, publish time, snippet; any language and country edition | **$1.50 per 1,000 articles**. Empty searches are free |
 | 📇 | **[Contact Details Extractor](contact-details-extractor/)** | Emails, phone numbers and official social links from a list of company websites; finds the contact/about pages itself | **$2 per 1,000 websites**. Sites that fail to load are free |
 | ⭐ | **[App Store Reviews Scraper](app-store-reviews-scraper/)** | Apple App Store reviews by app **name**, link or id, across many countries, with star/keyword/date filters applied before you pay | **$0.10 per 1,000 reviews**. Filtered-out reviews are free |
+| 🧱 | **[Tech Stack Detector](tech-stack-detector/)** | CMS, ecommerce platform, frameworks, analytics, hosting, **email and DNS provider** of any website, with the evidence for every detection | **$2 per 1,000 websites**. Failed sites are free |
 
 **▶ Try them:** [all Siftwright tools on the Apify Store](https://apify.com/siftwright) · product pages and guides at [siftwright.com](https://siftwright.com)
 New Apify accounts get free monthly credit, so you can test without paying.
