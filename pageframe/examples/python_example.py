@@ -17,7 +17,7 @@ run = client.actor("siftwright/pageframe-screenshots").call(run_input={
     "blockCookieBanners": True,
 })
 
-for i, item in enumerate(client.dataset(run["defaultDatasetId"]).iterate_items()):
+for i, item in enumerate(client.dataset(run.default_dataset_id).iterate_items()):
     if item["status"] != "ok":
         print("failed (not charged):", item["url"], item.get("error"))
         continue

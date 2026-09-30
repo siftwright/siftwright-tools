@@ -118,7 +118,7 @@ run = client.actor("siftwright/youtube-transcript-extractor").call(run_input={
     "urls": ["https://www.youtube.com/watch?v=dQw4w9WgXcQ"],
     "outputFormats": ["text", "srt"],
 })
-for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+for item in client.dataset(run.default_dataset_id).iterate_items():
     print(item["title"], item["wordCount"], "words")
 ```
 

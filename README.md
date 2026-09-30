@@ -17,8 +17,11 @@
 |---|---|---|---|
 | <img src="assets/icon-youtube-transcript.png" width="48"> | **[YouTube Transcript Extractor](youtube-transcript-extractor/)** | Transcripts and subtitles from videos, Shorts, playlists and whole channels, as text, timestamped JSON, **SRT** or **VTT**, in any language, with auto-translate | **$3 per 1,000 transcripts**. Caption-less videos are free |
 | <img src="assets/icon-pageframe.png" width="48"> | **[Pageframe](pageframe/)** | Screenshot any URL to **PNG/JPEG** or a print-ready **PDF**: full-page, retina 2x/3x, cookie banners removed automatically | **$1.50 per 1,000 captures**. Failed pages are free |
+| 📰 | **[Google News Scraper](https://apify.com/siftwright/google-news-scraper)** | Google News results for any keyword, brand or topic as JSON: title, link, source, publish time, snippet; any language and country edition | **$1.50 per 1,000 articles**. Empty searches are free |
+| 📇 | **[Contact Details Extractor](contact-details-extractor/)** | Emails, phone numbers and official social links from a list of company websites; finds the contact/about pages itself | **$2 per 1,000 websites**. Sites that fail to load are free |
+| ⭐ | **[App Store Reviews Scraper](app-store-reviews-scraper/)** | Apple App Store reviews by app **name**, link or id, across many countries, with star/keyword/date filters applied before you pay | **$0.10 per 1,000 reviews**. Filtered-out reviews are free |
 
-**▶ Try them:** [YouTube Transcript Extractor on Apify](https://apify.com/siftwright/youtube-transcript-extractor) · [Pageframe on Apify](https://apify.com/siftwright/pageframe-screenshots)
+**▶ Try them:** [all Siftwright tools on the Apify Store](https://apify.com/siftwright) · product pages and guides at [siftwright.com](https://siftwright.com)
 New Apify accounts get free monthly credit, so you can test without paying.
 
 ## Why Siftwright
@@ -31,7 +34,7 @@ New Apify accounts get free monthly credit, so you can test without paying.
 ## 60-second quick start (Python)
 
 ```bash
-pip install apify-client
+pip install apify-client   # examples use apify-client 3.x
 ```
 
 ```python
@@ -42,7 +45,7 @@ client = ApifyClient("YOUR_APIFY_TOKEN")  # free at console.apify.com → Settin
 run = client.actor("siftwright/youtube-transcript-extractor").call(
     run_input={"urls": ["https://www.youtube.com/watch?v=dQw4w9WgXcQ"], "outputFormats": ["text"]}
 )
-for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+for item in client.dataset(run.default_dataset_id).iterate_items():
     print(item["title"], "-", item["wordCount"], "words")
 ```
 
@@ -54,7 +57,7 @@ Add Siftwright tools to Claude Desktop, Cursor or any MCP client through Apify's
 
 ## Support
 
-Found a bug or want a feature? [Open an issue](../../issues). We read every one.
+Found a bug or want a feature? [Open an issue](../../issues) or email support@siftwright.com. We read every one.
 
 ---
 

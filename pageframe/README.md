@@ -105,7 +105,7 @@ run = client.actor("siftwright/pageframe-screenshots").call(run_input={
     "fullPage": True,
     "deviceScaleFactor": 2,
 })
-for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+for item in client.dataset(run.default_dataset_id).iterate_items():
     print(item["url"], item["status"], item.get("fileUrl"))
 ```
 

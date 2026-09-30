@@ -1,6 +1,6 @@
 """Get YouTube transcripts with the Siftwright YouTube Transcript Extractor.
 
-pip install apify-client
+pip install apify-client   # apify-client 3.x; on 2.x use run["defaultDatasetId"]
 export APIFY_TOKEN=...   # console.apify.com -> Settings -> API & Integrations
 """
 import os
@@ -17,7 +17,7 @@ run = client.actor("siftwright/youtube-transcript-extractor").call(run_input={
     "maxVideosPerSource": 5,
 })
 
-for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+for item in client.dataset(run.default_dataset_id).iterate_items():
     if item["status"] != "ok":
         print("skipped (not charged):", item["url"], item.get("error"))
         continue
