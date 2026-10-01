@@ -21,6 +21,7 @@
 | 📇 | **[Contact Details Extractor](contact-details-extractor/)** | Emails, phone numbers and official social links from a list of company websites; finds the contact/about pages itself | **$2 per 1,000 websites**. Sites that fail to load are free |
 | ⭐ | **[App Store Reviews Scraper](app-store-reviews-scraper/)** | Apple App Store reviews by app **name**, link or id, across many countries, with star/keyword/date filters applied before you pay | **$0.10 per 1,000 reviews**. Filtered-out reviews are free |
 | 🧱 | **[Tech Stack Detector](tech-stack-detector/)** | CMS, ecommerce platform, frameworks, analytics, hosting, **email and DNS provider** of any website, with the evidence for every detection | **$2 per 1,000 websites**. Failed sites are free |
+| 💼 | **[ATS Jobs Scraper](ats-jobs-scraper/)** | Open jobs from **Greenhouse, Lever, Ashby, SmartRecruiters and Recruitee** career boards in one schema; give board URLs, websites or company names, filter by title, location, department, remote and date before you pay | **$1 per 1,000 jobs**. Companies without a board are free |
 
 **▶ Try them:** [all Siftwright tools on the Apify Store](https://apify.com/siftwright) · product pages and guides at [siftwright.com](https://siftwright.com)
 New Apify accounts get free monthly credit, so you can test without paying.
