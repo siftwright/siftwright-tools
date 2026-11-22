@@ -9,7 +9,7 @@ You need a free Apify account and its API token (console.apify.com → Settings 
 Add a remote MCP server with this URL and your token as a Bearer header:
 
 ```
-https://mcp.apify.com/?tools=siftwright/youtube-transcript-extractor,siftwright/pageframe-screenshots,siftwright/google-news-scraper,siftwright/contact-details-extractor,siftwright/app-store-reviews-scraper,siftwright/tech-stack-detector,siftwright/ats-jobs-scraper,siftwright/domain-whois-dns-lookup
+https://mcp.apify.com/?tools=siftwright/youtube-transcript-extractor,siftwright/pageframe-screenshots,siftwright/google-news-scraper,siftwright/contact-details-extractor,siftwright/app-store-reviews-scraper,siftwright/tech-stack-detector,siftwright/ats-jobs-scraper,siftwright/domain-whois-dns-lookup,siftwright/email-validator-mx-disposable
 ```
 
 ```
@@ -27,7 +27,7 @@ Authorization: Bearer YOUR_APIFY_TOKEN
         "-y",
         "@apify/actors-mcp-server",
         "--actors",
-        "siftwright/youtube-transcript-extractor,siftwright/pageframe-screenshots,siftwright/google-news-scraper,siftwright/contact-details-extractor,siftwright/app-store-reviews-scraper,siftwright/tech-stack-detector,siftwright/ats-jobs-scraper,siftwright/domain-whois-dns-lookup"
+        "siftwright/youtube-transcript-extractor,siftwright/pageframe-screenshots,siftwright/google-news-scraper,siftwright/contact-details-extractor,siftwright/app-store-reviews-scraper,siftwright/tech-stack-detector,siftwright/ats-jobs-scraper,siftwright/domain-whois-dns-lookup,siftwright/email-validator-mx-disposable"
       ],
       "env": { "APIFY_TOKEN": "YOUR_APIFY_TOKEN" }
     }
@@ -60,5 +60,6 @@ A ready-to-copy version of this is in [`claude_desktop_config.example.json`](cla
 | `siftwright/tech-stack-detector` | What a website is built with, plus email/DNS provider, with evidence | $0.002 per website |
 | `siftwright/ats-jobs-scraper` | Open jobs from Greenhouse, Lever, Ashby, SmartRecruiters and Recruitee boards, filtered | $0.001 per job |
 | `siftwright/domain-whois-dns-lookup` | Registrar, created/expiry dates, age, nameservers, MX/SPF/DMARC | $0.001 per domain |
+| `siftwright/email-validator-mx-disposable` | Bulk email verdicts: syntax, MX, disposable domains, typo suggestions | $0.0008 per email |
 
 Failed items are never charged. Load only the tools your agent needs by trimming the `tools=` list.
