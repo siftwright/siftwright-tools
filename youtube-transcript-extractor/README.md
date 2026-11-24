@@ -6,7 +6,7 @@
 
 Get the **transcript (captions / subtitles) of any YouTube video** in seconds — as plain text, timestamped JSON segments, **SRT** or **WebVTT**. Paste video links, Shorts, whole **playlists** or entire **channels**, pick a language (or auto-translate), and download the results as JSON, CSV, Excel or via API.
 
-**Price: $3 per 1,000 transcripts ($0.003 each).** You only pay for transcripts that are actually extracted — videos without captions, private videos and errors are **free**. Video metadata is included at no extra charge.
+**Price: $1.50 per 1,000 transcripts ($0.0015 each).** You only pay for transcripts that are actually extracted — videos without captions, private videos and errors are **free**. Video metadata is included at no extra charge.
 
 ![Real input example](yt-transcript-input.png)
 ![Real dataset output](yt-transcript-output.png)
@@ -16,7 +16,7 @@ Get the **transcript (captions / subtitles) of any YouTube video** in seconds �
 
 | | This Actor |
 |---|---|
-| 💵 **Price** | **$3 per 1,000 transcripts**, no monthly rental |
+| 💵 **Price** | **$1.50 per 1,000 transcripts**, no monthly rental |
 | 🛡️ **Pay only for success** | Caption-less, private and failed videos cost **$0** (some tools bill every result row, even failures) |
 | 🎁 **Free extras** | Title, channel, views, duration, publish date and available languages at no extra charge |
 | 📦 **Every format in one run** | Plain text, timestamped JSON, **SRT** and **VTT** |
@@ -106,7 +106,7 @@ Videos without a transcript are returned with `"status": "no_transcript"` and an
 
 ## Pricing
 
-Pay-per-event: **$0.003 per extracted transcript** (= $3 per 1,000). No monthly rental, no charge for failed videos, playlists/channel listing or metadata. Apify's free plan gives you monthly credits so you can try it for free.
+Pay-per-event: **$0.0015 per extracted transcript** (= $1.50 per 1,000). No monthly rental, no charge for failed videos, playlists/channel listing or metadata. Apify's free plan gives you monthly credits so you can try it for free.
 
 ## Quick start in Python
 

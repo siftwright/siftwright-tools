@@ -4,7 +4,33 @@ Every Siftwright tool is a public Apify Actor, so any MCP-compatible client (Cla
 
 You need a free Apify account and its API token (console.apify.com → Settings → API & Integrations). You pay only for successful results, at the prices listed in the main README.
 
-## Option A: hosted (no install)
+## Try it free first: Siftwright's hosted MCP server (no account, no key)
+
+Siftwright also runs its own remote MCP server at **`https://siftwright.com/mcp`** (streamable HTTP, listed in the official MCP Registry as `com.siftwright/web-data`). Two of its tools work **without any key or sign-up**, one domain per call, with a daily limit per network:
+
+- `domain_whois`: registrar, created/expiry dates, age, nameservers, MX/SPF/DMARC for a domain
+- `pqc_scan`: whether a site uses post-quantum TLS key exchange (X25519MLKEM768 / ML-KEM)
+
+```json
+{
+  "mcpServers": {
+    "siftwright": { "type": "http", "url": "https://siftwright.com/mcp" }
+  }
+}
+```
+
+Quick check from a terminal (real response shape, abbreviated):
+
+```bash
+curl -s https://siftwright.com/mcp \
+  -H "Content-Type: application/json" -H "Accept: application/json, text/event-stream" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"domain_whois","arguments":{"domains":["wikipedia.org"]}}}'
+# {"mode":"free_trial","results":[{"domain":"wikipedia.org","registrar":"MarkMonitor Inc.","createdAt":"2001-01-13...","nameservers":[...],"dns":{"mx":[...],"spf":"v=spf1 ...","dmarc":"v=DMARC1; p=reject; ..."}}], ...}
+```
+
+The other 7 tools on that server (YouTube transcripts, screenshots, Google News, contact details, tech stack, App Store reviews, jobs) need a Siftwright API key sent as `Authorization: Bearer sw_live_...` ([plans](https://siftwright.com/pricing/), failed results are free; [docs](https://siftwright.com/docs/#mcp)). If you'd rather pay per result with no subscription, use the Apify options below.
+
+## Option A: hosted via Apify (no install)
 
 Add a remote MCP server with this URL and your token as a Bearer header:
 
@@ -52,7 +78,7 @@ A ready-to-copy version of this is in [`claude_desktop_config.example.json`](cla
 
 | Actor | What the agent can do | Price |
 |---|---|---|
-| `siftwright/youtube-transcript-extractor` | Transcripts/subtitles for videos, playlists, channels | $0.003 per transcript |
+| `siftwright/youtube-transcript-extractor` | Transcripts/subtitles for videos, playlists, channels | $0.0015 per transcript |
 | `siftwright/pageframe-screenshots` | PNG/JPEG screenshots and PDFs of URLs | $0.0015 per capture |
 | `siftwright/google-news-scraper` | Google News results for a query | $0.0015 per article |
 | `siftwright/contact-details-extractor` | Emails, phones, social links from company sites | $0.002 per website |
